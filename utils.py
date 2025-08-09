@@ -24,36 +24,34 @@ button[data-baseweb] {{
     justify-content: center !important;
     box-sizing: border-box !important;
     text-align: center !important;
-}
+}}
 
 /* Make the Streamlit wrapper divs expand so buttons fill their column */
 div.stButton,
 div.stDownloadButton,
-div[data-testid="stHorizontalBlock"] > div {
+div[data-testid="stHorizontalBlock"] > div {{
     width: 100% !important;
-}
-
+}}
 /* Force the actual <button> to fill wrapper (so columns make them equal) */
 div.stButton > button,
-div.stDownloadButton > button {
+div.stDownloadButton > button {{
     width: 100% !important;
     max-width: 100% !important;
-}
-
+}}
 /* When using horizontal blocks, make each child flex equally so columns are same width */
-div[data-testid="stHorizontalBlock"] > div {
+div[data-testid="stHorizontalBlock"] > div {{
     flex: 1 1 0px !important;
-}
+}}
 
 /* hover & disabled */
-section[data-testid="stAppViewContainer"] button:hover {
+section[data-testid="stAppViewContainer"] button:hover {{
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.12);
-}
-section[data-testid="stAppViewContainer"] button:disabled {
+}}
+section[data-testid="stAppViewContainer"] button:disabled {{
     background-color: #a8c7ff !important;
     cursor: not-allowed;
-}
+}}
 </style>
 """
 
@@ -178,4 +176,5 @@ def safe_excel_export(df, filename="processed_dataset.xlsx"):
 
 
     pass
+
 
