@@ -1,7 +1,8 @@
-streamlit==1.47.0
+streamlit==1.47.1
 pandas
 numpy
 scikit-learn
 plotly
 openpyxl
+
 
