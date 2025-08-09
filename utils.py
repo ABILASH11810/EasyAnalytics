@@ -156,8 +156,4 @@ def safe_excel_export(df, filename="processed_dataset.xlsx"):
         csv_data = df.to_csv(index=False).encode('utf-8')
         return csv_data, "csv", "Download as CSV (Error occurred)"
 
-
     pass
-
-
-
