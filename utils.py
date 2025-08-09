@@ -9,9 +9,14 @@ div.stButton > button {{
     color:white;
     font-weight:bold;
     border-radius:8px;
-    width:100%;
-    border: none;
-    padding: 0.5rem 1rem;
+    border:none;
+    padding: 0.6rem 1rem;
+    font-size: 16px;
+    min-width: 150px; /* fixed min size */
+    height: 45px;     /* fixed height */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }}
 div.stButton > button:hover {{
     background-color:#0056b3;
@@ -155,5 +160,6 @@ def safe_excel_export(df, filename="processed_dataset.xlsx"):
         # Ultimate fallback
         csv_data = df.to_csv(index=False).encode('utf-8')
         return csv_data, "csv", "Download as CSV (Error occurred)"
+
 
     pass
