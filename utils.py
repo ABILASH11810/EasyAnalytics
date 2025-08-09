@@ -4,53 +4,35 @@ import pandas as pd
 THEME_PRIMARY = "#007bff"
 BTN_STYLE = f"""
 <style>
-/* target all buttons inside the app container and the common Streamlit wrappers */
-section[data-testid="stAppViewContainer"] button,
-div.stButton > button,
-div.stDownloadButton > button,
-div[data-testid="stHorizontalBlock"] button,
-button[data-baseweb] {{
-    background-color: {THEME_PRIMARY} !important;
-    color: #ffffff !important;
-    font-weight: 600 !important;
-    border-radius: 8px !important;
-    border: none !important;
-    padding: 0.5rem 1rem !important;
-    font-size: 14px !important;
-    min-width: 160px !important;  /* ensures minimum width */
-    height: 44px !important;      /* fixed height for all buttons */
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
+div.stButton > button {{
+    background-color:{THEME_PRIMARY};
+    color:white;
+    font-weight:bold;
+    border-radius:8px;
+    width:100%;
+    border: none;
+    padding: 0.5rem 1rem;
 }}
-
-/* Make the Streamlit wrapper divs expand so buttons fill their column */
-div.stButton,
-div.stDownloadButton,
-div[data-testid="stHorizontalBlock"] > div {{
-    width: 100% !important;
-}}
-/* Force the actual <button> to fill wrapper (so columns make them equal) */
-div.stButton > button,
-div.stDownloadButton > button {{
-    width: 100% !important;
-    max-width: 100% !important;
-}}
-/* When using horizontal blocks, make each child flex equally so columns are same width */
-div[data-testid="stHorizontalBlock"] > div {{
-    flex: 1 1 0px !important;
-}}
-
-/* hover & disabled */
-section[data-testid="stAppViewContainer"] button:hover {{
+div.stButton > button:hover {{
+    background-color:#0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }}
-section[data-testid="stAppViewContainer"] button:disabled {{
-    background-color: #a8c7ff !important;
-    cursor: not-allowed;
+div.stButton > button:disabled {{
+    background-color:#8abaf8;
+    color:white;
+}}
+div[data-testid="stHorizontalBlock"] {{
+    gap:1rem;
+}}
+h1, h2, h3 {{
+    color:black;
+    text-align:center;
+}}
+.main-container {{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }}
 </style>
 """
@@ -176,5 +158,6 @@ def safe_excel_export(df, filename="processed_dataset.xlsx"):
 
 
     pass
+
 
 
